@@ -36,6 +36,15 @@ export class PlayersController {
     await this.playersService.updatePlayer(_id, updatePlayerDTO);
   }
 
+  @Put('/:_id')
+  @UsePipes(ValidationPipe)
+  async updateRouterPlayer(
+    @Body() updatePlayerDTO: UpdatePlayerDTO,
+    @Param('_id', PlayersValidationParamsPipe) _id: string,
+  ): Promise<void> {
+    await this.playersService.updatePlayer(_id, updatePlayerDTO);
+  }
+
   @Get()
   async consultPlayers(): Promise<Player[]> {
     return await this.playersService.consultAllPlayers();
