@@ -23,6 +23,14 @@ export class CategoriesController {
     return await this.categoriesService.createCategory(createCategoryDTO);
   }
 
+  @Post()
+  @UsePipes(ValidationPipe)
+  async createRouteCategory(
+    @Body() createCategoryDTO: CreateCategoryDTO,
+  ): Promise<Category> {
+    return await this.categoriesService.createCategory(createCategoryDTO);
+  }
+
   @Patch()
   @UsePipes(ValidationPipe)
   async updateCategory(
