@@ -64,4 +64,4 @@ $ npm run test:cov
 
 ## Stay in touch
 
-- Author - Lucas Matos
+- Authors - [Gabriel Tavares](https://www.linkedin.com/in/gabrielltav/) and [Lucas Weslen](https://www.linkedin.com/in/lucas-weslen-lopes-de-matos-1b1b0a183/)
